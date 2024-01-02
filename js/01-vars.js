@@ -23,6 +23,12 @@ console.log(shouldConfirm);
  * * - Оператор typeof()
  */
 
+const type = typeof isOpen;
+
+console.log(type);
+
 /*
  * - Як window.alert() блокує інтерпретацію
  */
+
+alert('Доброго вечора ми з України!');
