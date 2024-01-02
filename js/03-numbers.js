@@ -83,7 +83,7 @@ console.log(result);
  * - Math.round()
  */
 
-// Формула: Math.random() * (max - main) + min;
+// Формула: Math.random() * (max - min) + min;
 
 // const max = 20;
 // const min = 1;
@@ -91,6 +91,10 @@ console.log(result);
 // const result = Math.round(Math.random() * (max - min) + min);
 
 // console.log(result);
+
+/*
+* Приклад з рандомним кольором фону 😄
+*/
 
 const colors = ['tomato', 'teal', 'blue', 'green', 'yellow', 'red'];
 const max = colors.length - 1;
