@@ -83,11 +83,23 @@ console.log(result);
  * - Math.round()
  */
 
-const max = 20;
-const min = 10;
+// Формула: Math.random() * (max - main) + min;
 
-const result = Math.round(Math.random() * (max - min) + min);
+// const max = 20;
+// const min = 1;
 
-console.log(result);
+// const result = Math.round(Math.random() * (max - min) + min);
 
-// Math.random() * (max - main) + min;
+// console.log(result);
+
+const colors = ['tomato', 'teal', 'blue', 'green', 'yellow', 'red'];
+const max = colors.length - 1;
+const min = 0;
+
+const index = Math.round(Math.random() * (max - min) + min);
+
+const currentColor = colors[index];
+
+console.log(currentColor);
+
+document.body.style.backgroundColor = currentColor;
