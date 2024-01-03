@@ -41,4 +41,4 @@ const res2 = number < x1 || number > x2;
 // false || false
 // false
 
-console.log(`Число ${number} попадає у відрізок до ${x1} або після ${x1}`, res2);
+console.log(`Число ${number} попадає у відрізок до ${x1} або після ${x2}`, res2);
