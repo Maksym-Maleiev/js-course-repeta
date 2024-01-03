@@ -16,6 +16,8 @@ console.log(`Число ${number} попадає у відрізок до ${x1}?
 
 console.log(`Число ${number} попадає у відрізок після ${x2}? `, number > x2);
 
-console.log(`Число ${number} попадає у відрізок від ${x1} до ${x2}? `, number > x1 && number < x2);
+const res1 = number > x1 && number < x2;
+console.log(`Число ${number} попадає у відрізок від ${x1} до ${x2}? `, res1);
 
-console.log(`Число ${number} попадає у відрізок до ${x1} або після ${x1}`, number < x1 || number > x2);
+const res2 = number < x1 || number > x2; 
+console.log(`Число ${number} попадає у відрізок до ${x1} або після ${x1}`, res2);
