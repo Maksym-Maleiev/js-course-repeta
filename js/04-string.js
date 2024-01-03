@@ -45,3 +45,20 @@ console.log(orderMsg);
 const welcomeMsg = `Гість ${firstName} ${lastName} засиляється у ${type} номер ${room}`;
 
 console.log(welcomeMsg);
+
+/*
+ * Нормалізація з методом toLowerCase()
+ */
+
+const brand = 'Apple';
+const inDb = 'apple';
+const normalize = brand.toLowerCase();
+
+console.log(normalize === inDb);
+
+
+
+
+/*
+ * Пошук у рядку з методом includes()
+ */
