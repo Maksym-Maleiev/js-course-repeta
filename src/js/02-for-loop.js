@@ -57,15 +57,20 @@ console.log('totalSalary:', totalSalary);
 // Наприклад, якщо min = 0 і max = 5, то діапазон 0-5,
 // і в ньому два парних числа - 2 та 4, їх сума 6.
 
+// 1. зробити var
 const min = 6;
 const max = 13;
 let total = 0;
 
+// 2. перебрати числа від min до max у циклі
 for (let i = min; i < max; i += 1){
+// 3. перебрати тільки парні числа
   if (i % 2 === 0) {
     console.log(`число: ${i}`);
+    // 4. написати суму парних чисел 
     total += i;
   }
 }
 
+// 5. написати лог
 console.log('total:', total);
