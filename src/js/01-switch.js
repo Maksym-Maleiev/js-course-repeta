@@ -110,11 +110,13 @@ console.log('price:', price);
 // - 'Вам перезвонит менеджер'
 
 // 1. зробити змінні
-const option = 4;
+
+const option = 3;
 let message;
 
 // 2. зробити switch 1.2.3
 // 3. у кожногму кейсі пишемо message рядок
+
 switch (option) {
   case 1:
     message = 'Ви зможете забрати товар завтра з 12:00 у нашому офісі';
@@ -133,4 +135,5 @@ switch (option) {
 }
 
 // 4. зробити лог message
+
 console.log(message);
