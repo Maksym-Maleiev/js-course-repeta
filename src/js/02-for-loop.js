@@ -51,3 +51,21 @@ for (let i = 1; i <= employees; i += 1){
 
 // 5. лог
 console.log('totalSalary:', totalSalary);
+
+// Напиши скрипт, який підраховує суму всіх парних чисел,
+// які входять діапазон чисел змінних від min до max.
+// Наприклад, якщо min = 0 і max = 5, то діапазон 0-5,
+// і в ньому два парних числа - 2 та 4, їх сума 6.
+
+const min = 6;
+const max = 13;
+let total = 0;
+
+for (let i = min; i < max; i += 1){
+  if (i % 2 === 0) {
+    console.log(`число: ${i}`);
+    total += i;
+  }
+}
+
+console.log('total:', total);
