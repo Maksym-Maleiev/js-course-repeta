@@ -83,7 +83,7 @@ console.log('total:', total);
 for (let i = min; i <= max; i += 1){
 // 3. перевіряємо ділення на залишок 
   if (i % 2 !== 0) {
-    console.log(`не парне число: ${i}`);
+    // console.log(`не парне число: ${i}`);
     continue;
   }
   console.log(`число парне: ${i}`);
