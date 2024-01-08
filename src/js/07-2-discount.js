@@ -31,7 +31,8 @@ if (totalSpent >= 100 && totalSpent < 1000) {
   console.log(`Золотий партнер, знижка ${discount}%`);
   console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount}%`);
 } else {
-  console.log('У вас ще немає партнерської знижки');
+  console.log(`У вас ще немає партнерської знижки, знижка: ${discount}%`);
+  console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount}%`);
 }
 
 console.log('Ваша знижка складає:', Math.round((totalSpent * discount) / 100) + ' кредитів');
