@@ -14,28 +14,30 @@
  * «Оформляємо замовлення на суму [сума] зі знижкою [знижка]%»
  */
 
-const totalSpent = 50;
+let totalSpent = 2000;
 let payment = 500;
 let discount = 0;
 
 if (totalSpent >= 100 && totalSpent < 1000) {
   discount = 2;
   console.log(`Бронзовий партнер, знижка ${discount}%`);
-  console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount}%`);
 } else if (totalSpent >= 1000 && totalSpent < 5000) {
   discount = 5;
   console.log(`Срібний партнер, знижка ${discount}%`);
-  console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount}%`);
 } else if (totalSpent >= 5000) {
   discount = 10;
   console.log(`Золотий партнер, знижка ${discount}%`);
-  console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount}%`);
 } else {
   console.log(`У вас ще немає партнерської знижки, знижка: ${discount}%`);
-  console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount}%`);
 }
 
-console.log('Ваша знижка складає:', Math.round((totalSpent * discount) / 100) + ' кредитів');
+payment = payment - payment * discount / 100;
+
+console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount}%`);
+
+totalSpent += payment;
+
+console.log(`Загальна сума витрат становить: ${totalSpent} кредитів`);
 
 // 'Бронзовий партнер, знижка 2%'
 // 'Срібний партнер, знижка 5%'
