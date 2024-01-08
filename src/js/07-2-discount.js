@@ -31,7 +31,7 @@ if (totalSpent >= 100 && totalSpent < 1000) {
   console.log(`У вас ще немає партнерської знижки, знижка: ${discount}%`);
 }
 
-payment = payment - payment * discount / 100;
+payment -= payment * discount / 100;
 
 console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount}%`);
 
