@@ -26,6 +26,7 @@ for (let i = 0; i < logins.length; i += 1){
   }
 */
 
+/*
 const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
 const loginToFind = 'poly1scute';
 let message = `Користувач ${loginToFind} не знайдено.`;
@@ -36,5 +37,27 @@ for (const login of logins) {
     break;
   }
 }
+
+console.log(message);
+*/
+
+/*
+const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+const loginToFind = 'poly1scute';
+let message;
+
+logins.includes(loginToFind) ? message = `Користувач ${loginToFind} знайдено.` : message = `Користувач ${loginToFind} не знайдено.`;
+
+console.log(message);
+*/
+
+// інший запис (більш сучасний)
+
+const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+const loginToFind = 'poly1scute';
+
+const message = logins.includes(loginToFind)
+  ? `Користувач ${loginToFind} знайдено.`
+  : `Користувач ${loginToFind} не знайдено.`;
 
 console.log(message);
