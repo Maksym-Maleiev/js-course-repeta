@@ -6,9 +6,20 @@
  * - Потім через join()
  */
 
+/*
 const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
-let string;
+let string = '';
 
-for (let i = 0; i < friends.length; i += 1){
-  
+for (const friend of friends) {
+  string += friend + ',';
 }
+
+string = string.slice(0, string.length -1);
+
+ console.log(string);
+*/
+
+const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+const string = friends.join(", ");
+
+console.log(string);
