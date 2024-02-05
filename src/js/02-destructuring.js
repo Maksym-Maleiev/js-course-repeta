@@ -53,6 +53,10 @@ const playlist = {
 
 const rgb = [255, 100, 80];
 
+const [red, green, blue] = rgb;
+
+// console.log(red, green, blue);
+
 const authors = {
   kiwi: 4,
   poly: 7,
@@ -60,9 +64,52 @@ const authors = {
   mango: 6,
 };
 
+const entries = Object.entries(authors);
+
+// console.log(entries);
+
+for (const [name, rating] of entries) {
+  //* lev2
+  // const [name, rating] = entry;
+  //* lev1
+  // const name = entry[0];
+  // const rating = entry[1];
+  // console.log(name, rating);
+}
+
 /*
  * Операція rest (збір)
  */
+
+// const profile = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: 'Ocho Rios, Jamaica',
+//   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// const { name, tag, location, ...restProp } = profile;
+
+// console.log(name, tag, location);
+// console.log(restProp);
+// console.log(profile);
+
+/*
+ * Паттерн «Об'єкт налаштувань»
+ * - деструктуризація параметра-об'єкта у підписі функції
+ * - rest при деструктуризації у підписі
+ */
+
+const showProfileInfo = function (userProfile) {
+  const { name, tag, location, ...restProp } = userProfile;
+
+  console.log(name, tag, location, restProp);
+};
 
 const profile = {
   name: 'Jacques Gluke',
@@ -76,10 +123,4 @@ const profile = {
   },
 };
 
-/*
- * Паттерн «Об'єкт налаштувань»
- * - деструктуризація параметра-об'єкта у підписі функції
- * - rest при деструктуризації у підписі
- */
-
-const showProfileInfo = function () {};
+showProfileInfo(profile);
