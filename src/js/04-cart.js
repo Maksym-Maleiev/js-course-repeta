@@ -61,8 +61,28 @@ const cart = {
 
     return total;
   },
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
+  increaseQuantity(productName) {
+    const { items } = this;
+
+    for (const { name, quantity } of items) {
+      if (name === productName) {
+        quantity += 1;
+      }
+    }
+
+    return quantity;
+  },
+  decreaseQuantity(productName) {
+    const { items } = this;
+
+    for (const { name, quantity } of items) {
+      if (name === productName) {
+        quantity -= 1;
+      }
+    }
+
+    return quantity;
+  },
 };
 
 console.log(cart.getItems());
@@ -82,7 +102,7 @@ console.log('Total: ', cart.countTotalPrice());
 cart.remove('🍇');
 console.table(cart.getItems());
 
-cart.clear();
+// cart.clear();
 console.log(cart.getItems());
 
 console.log('Total: ', cart.countTotalPrice());
