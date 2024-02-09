@@ -67,10 +67,16 @@ const cart = {
     for (const { name, quantity } of items) {
       if (name === productName) {
         quantity += 1;
+        return;
       }
     }
 
-    return quantity;
+    const newProduct = {
+      name: productName,
+      quantity: 1,
+    };
+
+    items.push(newProduct);
   },
   decreaseQuantity(productName) {
     const { items } = this;
@@ -107,8 +113,8 @@ console.log(cart.getItems());
 
 console.log('Total: ', cart.countTotalPrice());
 
-// cart.increaseQuantity('🍎');
-// console.table(cart.getItems());
+cart.increaseQuantity('🍎');
+console.table(cart.getItems());
 
 // cart.decreaseQuantity('🍋');
 // cart.decreaseQuantity('🍋');
