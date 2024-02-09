@@ -116,6 +116,6 @@ cart.increaseQuantity('🍎');
 cart.increaseQuantity('🍇');
 console.table(cart.getItems());
 
-// cart.decreaseQuantity('🍋');
-// cart.decreaseQuantity('🍋');
-// console.table(cart.getItems());
+cart.decreaseQuantity('🍋');
+cart.decreaseQuantity('🍋');
+console.table(cart.getItems());
