@@ -101,11 +101,16 @@ const onRequestSuccess = function (response) {
  * Фільтр
  */
 
-const filter = function (array) {
+const filter = function (array, test) {
   const filteredArray = [];
 
   for (const element of array) {
     console.log(element);
+    const passed = test(element);
+
+    if (passed) {
+      filteredArray.push(element);
+    }
   }
 
   return filteredArray;
@@ -116,12 +121,29 @@ const filter = function (array) {
 // 3. якщо елемент масиву задовольняє умові, то функція поверне true
 // 3. якщо елемент масиву НЕ задовольняє умові, то функція поверне false
 
-console.log(filter([1, 2, 3, 4, 5]));
+const callback1 = function (value) {
+  return value >= 3;
+};
 
-console.log(filter([1, 2, 3, 4, 5, 6, 7, 8]));
+const callback2 = function (value) {
+  return value <= 4;
+};
 
-// const fruits = [
-//   { name: 'apples', quantity: 200, isFresh: true },
-//   { name: 'grapes', quantity: 150, isFresh: false },
-//   { name: 'bananas', quantity: 100, isFresh: true },
-// ];
+const r1 = filter([1, 2, 3, 4, 5], callback1);
+console.log(r1);
+
+const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], callback2);
+console.log(r2);
+
+const fruits = [
+  { name: 'apples', quantity: 200, isFresh: true },
+  { name: 'grapes', quantity: 150, isFresh: false },
+  { name: 'bananas', quantity: 100, isFresh: true },
+];
+
+const getFruitsWithQuantity = function (fruit) {
+  return fruit.quantity >= 120;
+};
+
+const r3 = filter(fruits, getFruitsWithQuantity);
+console.log(r3);
